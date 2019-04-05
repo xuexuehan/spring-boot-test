@@ -56,7 +56,7 @@ public class ProviderController {
         logger.info("更新供应商操作---");
         providerDao.save(provider);
 
-        return "redirect:providers";
+        return "redirect:/providers";
     }
 
     //前往添加界面
@@ -70,7 +70,7 @@ public class ProviderController {
     public String add(Provider provider) {
         logger.info("添加供应商信息" + provider);
         providerDao.save(provider);
-        return "redirect:providers";
+        return "redirect:/providers";
     }
 
     //删除供应商信息
