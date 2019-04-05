@@ -51,7 +51,7 @@ public class BillController {
     public String update(Bill bill) {
         logger.info("更新账单操作---" + bill);
         billDao.save(bill);
-        return "redirect:bills";
+        return "redirect:/bills";
     }
 
     //前往添加界面
@@ -65,7 +65,7 @@ public class BillController {
     public String add(Bill bill) {
         logger.info("添加账单信息" + bill);
         billDao.save(bill);
-        return "redirect:bills";
+        return "redirect:/bills";
     }
 
     //删除账单信息
@@ -73,6 +73,6 @@ public class BillController {
     public String delete(@PathVariable("bid") Integer bid) {
         logger.info("删除账单信息" + bid);
         billDao.delete(bid);
-        return "redirect:bills";
+        return "redirect:/bills";
     }
 }
