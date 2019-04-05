@@ -45,7 +45,7 @@ public class UserController {
     public String update(User user) {
         logger.info("更新用户操作---" + user);
         userDao.save(user);
-        return "redirect:users";
+        return "redirect:/users";
     }
 
     //前往添加界面
@@ -59,7 +59,7 @@ public class UserController {
     public String add(User user) {
         logger.info("添加用户操作---" + user);
         userDao.save(user);
-        return "redirect:users";
+        return "redirect:/users";
     }
 
     //删除用户信息
@@ -67,6 +67,6 @@ public class UserController {
     public String delete(@PathVariable("id") Integer id) {
         logger.info("删除用户操作---" + id);
         userDao.delete(id);
-        return "redirect:users";
+        return "redirect:/users";
     }
 }
